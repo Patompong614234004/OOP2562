@@ -1,40 +1,48 @@
 public class Student {
-    String studentId;
-    String studentName;
-    String faculty;
-    String major;
-
-    void enrollment() {
+    protected String studentId;
+    protected String StudentName;
+    protected String faculty;
+    protected String major;
+    
+    public void enrollment(){
         System.out.println("enrollment");
     }
-
-    void payment() {
+    public void payment(){
         System.out.println("payment");
     }
-
-    void addCourse() {
+    public void addCourse(){
         System.out.println("addCourse");
     }
-
-    void dropCourse() {
-        System.out.println("dropCourse");
+    public void dropCourse(){
+        System.out.println("dropcourse");
     }
-
-    public void showdata() {
-        System.out.println("ID :" + studentId);
-        System.out.println("Name :" + studentName);
-        System.out.println("Major :" + major);
-        System.out.println("Faculty :" + faculty);
-
+    
+    public void showdata(){
+        System.out.println("ID :"+studentId);
+        System.out.println("Name :"+StudentName);
+        System.out.println("Major : "+major);
+        System.out.println("Faculty : "+faculty);
+               
+                
     }
-
-    public static void main(String[] args) {//psvm
-        Student nali = new Student();
-        System.out.println("Object = " + nali);
-        nali.studentId = "614234007";
-        nali.studentName = "Suphakin";
-        nali.major = "CS";
-        nali.faculty = "Scuence and Technology";
+    
+    public static void main(String[] args){
+        Student supansa = new Student();
+        System.out.println("Object ="+supansa);
+        supansa.studentId = "614234022";
+        supansa.major = "CS";
+        supansa.faculty = "Science and Technology";
+        supansa.showdata();
+        supansa.enrollment();
+        supansa.dropCourse();
         
+        Student sineenart = new Student();
+        sineenart.studentId = "614234006";
+        sineenart.StudentName = "Miss sineenart";
+        sineenart.major = "IT";
+        sineenart.faculty = "Science and Technology";
+        System.out.println("Object = "+sineenart);
+        sineenart.showdata();
     }
 }//end class
+        
